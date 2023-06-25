@@ -1,12 +1,12 @@
 const net = require('net');
 
-const AMI_HOST = '149.28.230.122'; // Replace with your Asterisk server IP
+const AMI_HOST = '207.148.16.205'; // Replace with your Asterisk server IP
 const AMI_PORT = 5038; // Default AMI port
 const AMI_USERNAME = 'testuser'; // Replace with your AMI username
-const AMI_PASSWORD = '7948e848a7166131b3a3ee9fc92ad6e1'; // Replace with your AMI password
+const AMI_PASSWORD = '1a46fa976a0d4826e4b40e45a8ebaa558968ec64'; // Replace with your AMI password
 
-const phone = '17324878977'; // Replace with the phone number to dial
-const exten = '001'; // Replace with the extension to call
+const phone = '12156347838'; // Replace with the phone number to dial
+const exten = '709'; // Replace with the extension to call
 
 const num = phone.replace(/^\+7/, '8').replace(/\D/g, '');
 
