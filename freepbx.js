@@ -48,12 +48,12 @@ const CHANNEL = process.env.CHANNEL;
 const CONTEXT = process.env.CONTEXT;
 const EXTEN = process.env.EXTENSION;
 const PRIORITY = parseInt(process.env.PRIORITY, 10);
-const CALLERID = `Test Call to ${number} Test Test Test`;
+const CALLERID = number;
 const TIMEOUT = parseInt(process.env.TIMEOUT, 10);
 
 ami.action({
-  'action': 'originate',
-  'channel': CHANNEL,
+  'action': 'Originate',
+  'channel': `Local/${EXTEN}@from-internal`,
   'context': CONTEXT,
   'exten': EXTEN,
   'priority': PRIORITY,
