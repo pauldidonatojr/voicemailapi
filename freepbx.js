@@ -1,8 +1,14 @@
+require('dotenv').config();
+
 const AsteriskManager = require('asterisk-manager');
 
-// Initialize manager with Asterisk server's port, host, username and password.
-let ami = new AsteriskManager('5038', '207.148.16.205', 'voicemailapi', '6105e2bbfa2d4fae3dc73742a795b57e8ab34508', true);
-
+let ami = new AsteriskManager(
+  process.env.AMI_PORT,
+  process.env.AMI_HOST,
+  process.env.AMI_USER,
+  process.env.AMI_PASSWORD,
+  true
+);
 // In case of any connectiviy problems we got you covered.
 ami.keepConnected();
 
